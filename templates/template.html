@@ -1,5 +1,4 @@
-$--| GitHub HTML5 Pandoc Template" v2.2 | 2020/08/12 | pandoc v2.1.1
-$--| Adaptación de JallProfesor <jall.profesor@gmail.com> v1.0|2020/10/30
+$--| JallProfesor <jall.profesor@gmail.com> v1.0|2020/11/05
 <!DOCTYPE html>
 $-------------------------------------------------------------------------> lang
 <html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
@@ -71,8 +70,6 @@ $-------------------------------------------------------------------------------
    <div class="header_nav">
   <ul>
       <li><a href="/index.html">Inicio</a></li>
-      <li><a href="/detalles/index.html">Detalles</a></li>
-      <li><a href="https://github.com/joseantoniolopezlorenzo/pandoc-static-site">Repositorio</a></li>
       <li><a href="/">CV</a></li>
   </ul>
 </div>
@@ -86,10 +83,7 @@ $---------------------------------------------------------------------> subtitle
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
-$-----------------------------------------------------------------------> author & date
-$for(author)$
-<p class="author">$author$ $if(date)$ - $date$ $endif$</p>
-$endfor$
+
 $----------------------------------------------------------------------> summary
 $if(summary)$
 <div class="summary">
@@ -135,6 +129,10 @@ $--------------------------------------------------------------------------> foo
       </li>
     </ul>
   </section>
+  $-----------------------------------------------------------------------> author & date
+$for(author)$
+<p class="author">$author$ $if(date)$ - $date$ $endif$</p>
+$endfor$
 </article>
 </body>
 </html>

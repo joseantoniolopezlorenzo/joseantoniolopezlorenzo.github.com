@@ -11,20 +11,13 @@ code {
     padding:0 25px;
     margin: 0 auto;
 }
-
+.title ,.subtitle {
+    text-align:center;
+}
 /* modificando github.css */
-.markdown-body h1 {
-  font-size: 1.7rem;
-  border: none;
-}
-.markdown-body h1.title {
-    margin: 1.5rem 0;
-    background-color: #ccc;
-    padding-top: 8px;
-    border:none;
-}
+
 .author{
-  text-align: right;
+  text-align: center;
   font-weight: bold;
 }
 h1.toc-title{

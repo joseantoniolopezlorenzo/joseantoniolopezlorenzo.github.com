@@ -74,7 +74,9 @@ gulp.task(
     gulp.watch("./src/**/*.md", gulp.series("convert-md"));
     gulp.watch("./src/assets/*.css", gulp.series("minify-css"));
     gulp.watch("./src/assets/images/*.*", gulp.series("cp-images"));
-    // gulp.watch("./dist/**/*.html").on("change", reload);
+    gulp.watch("./templates/template.html", gulp.series("convert-md"));
+     gulp.watch("./templates/template.html").on("change", reload);
+    gulp.watch("./docs/**/*.html").on("change", reload);
     gulp.watch("./docs/assets/*.css").on("change", reload);
   })
 );

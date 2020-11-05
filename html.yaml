@@ -11,5 +11,3 @@ filters:
 template: ./templates/template.html
 include-in-header:
   - templates/header.txt
-toc: true
-toc-depth: 3
