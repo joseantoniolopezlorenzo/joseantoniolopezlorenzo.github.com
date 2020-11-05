@@ -1,0 +1,22 @@
+{
+  "name": "jall.servidor",
+  "version": "1.0.0",
+  "description": "\"sitio estático generado a partir de md\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp default --options false",
+    "build": "gulp build && ./togithub.sh"
+  },
+  "author": "jall.profesor@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-rename": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-exec": "^5.0.0"
+  }
+}

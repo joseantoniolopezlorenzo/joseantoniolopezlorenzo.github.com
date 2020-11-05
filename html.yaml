@@ -1,0 +1,15 @@
+from: markdown
+to: html5
+fail-if-warnings: false
+standalone: true
+section-divs: true
+eol: lf
+filters:
+  - pandoc-static-katex
+  - mermaid-filter
+  - pandoc-chem-struct
+template: ./templates/template.html
+include-in-header:
+  - templates/header.txt
+toc: true
+toc-depth: 3
