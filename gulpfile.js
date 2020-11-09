@@ -41,7 +41,7 @@ gulp.task("convert-md", function () {
 
 gulp.task("minify-css", function () {
   return gulp
-    .src(["./src/assets/*.css"])
+    .src(["./assets/*.css"])
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./docs/assets"));
