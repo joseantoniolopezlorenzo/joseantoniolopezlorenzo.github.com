@@ -4,6 +4,7 @@ var cleanCSS = require("gulp-clean-css");
 var rename = require("gulp-rename");
 var htmlmin = require("gulp-html-minifier");
 var gulpexec = require("gulp-exec");
+var clean = require('gulp-clean');
 var path = require("path");
 var browserSync = require("browser-sync").create();
 
@@ -46,9 +47,19 @@ gulp.task("minify-css", function () {
     .pipe(gulp.dest("./docs/assets"));
 });
 
-gulp.task("cp-images", function () {
+gulp.task('clean-doc-images', function () {
+    return gulp.src(['./docs/assets/images/pd-images/*.*'], {read: false})
+        .pipe(clean());
+});
+
+gulp.task('clean-src-images', function () {
+    return gulp.src(['./assets/images/pd-images/*.*'], {read: false})
+        .pipe(clean());
+});
+
+gulp.task("cp-images",  function () {
   return gulp
-    .src(["./src/assets/images/*.*"])
+    .src(["assets/images/*.*", "assets/images/**/*.png", "assets/images/**/*.svg"])
     .pipe(gulp.dest("./docs/assets/images"));
 });
 
@@ -67,15 +78,15 @@ gulp.task("minify-html", function () {
 
 gulp.task(
   "server",
-  gulp.series("convert-md", "minify-css", "cp-images", function () {
+  gulp.series("clean-doc-images", "clean-src-images","convert-md", "minify-css", "cp-images", function () {
     browserSync.init({
       server: "./docs",
     });
     gulp.watch("./src/**/*.md", gulp.series("convert-md"));
     gulp.watch("./src/assets/*.css", gulp.series("minify-css"));
-    gulp.watch("./src/assets/images/*.*", gulp.series("cp-images"));
+    gulp.watch("./assets/images/**/*.*", gulp.series("clean-doc-images", "cp-images"));
     gulp.watch("./templates/template.html", gulp.series("convert-md"));
-     gulp.watch("./templates/template.html").on("change", reload);
+    gulp.watch("./templates/template.html").on("change", reload);
     gulp.watch("./docs/**/*.html").on("change", reload);
     gulp.watch("./docs/assets/*.css").on("change", reload);
   })

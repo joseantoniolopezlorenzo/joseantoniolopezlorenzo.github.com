@@ -20,6 +20,16 @@ code {
   text-align: center;
   font-weight: bold;
 }
+.columns {
+  display: inline-block;
+}
+
+.column {
+  float: left;
+  width: 46%;
+  padding: 0 2%;
+}
+
 h1.toc-title{
   font-size: 0.8rem;
   font-weight: normal;
@@ -41,6 +51,7 @@ h1.toc-title{
   float: left;
   display: inline;
   margin:0;
+  width: calc(100%/4);
 }
 
 .header_nav li + li {
@@ -51,7 +62,6 @@ h1.toc-title{
   display: inline-block;
   color: white;
   text-align: center;
-  width: 14em;
   padding: 5px 15px;
   text-decoration: none;
   margin: 0;
@@ -93,13 +103,4 @@ h1.toc-title{
 }
 .contacto a img {
   height: 2.4rem;
-}
-/* específico para móviles */
-@media only screen and (max-width: 600px) {
-  .katex { font-size: 1.0rem; }
-  .markdown-body { font-size: 0.9rem; padding: 20px; }
-  .markdown-body h1 {
-    margin: 0.2em 0;
-    font-size: 1.2rem;
-}
 }
