@@ -1,5 +1,5 @@
 set terminal svg \
-    font "arial,10" fontscale 1.0 size 500, 350
+    font "arial,12" fontscale 2.0 size 500, 350
 set border 4095 front linetype -1 linewidth 1.000
 set view 130, 10, 1, 1
 set samples 50, 50

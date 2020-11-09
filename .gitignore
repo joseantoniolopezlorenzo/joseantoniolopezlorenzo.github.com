@@ -43,7 +43,6 @@ jspm_packages/
 .geanyprj
 mermaid-filter.err
 package-lock.json
-./assets/
 
 # TypeScript v1 declaration files
 typings/

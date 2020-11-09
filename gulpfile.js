@@ -41,10 +41,10 @@ gulp.task("convert-md", function () {
 
 gulp.task("minify-css", function () {
   return gulp
-    .src(["./assets/*.css"])
+    .src(["./assets/css/*.css"])
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("./docs/assets"));
+    .pipe(gulp.dest("./docs/assets/css"));
 });
 
 gulp.task('clean-doc-images', function () {
@@ -83,12 +83,12 @@ gulp.task(
       server: "./docs",
     });
     gulp.watch("./src/**/*.md", gulp.series("convert-md"));
-    gulp.watch("./src/assets/*.css", gulp.series("minify-css"));
+    gulp.watch("./assets/css/*.css", gulp.series("minify-css"));
     gulp.watch("./assets/images/**/*.*", gulp.series("clean-doc-images", "cp-images"));
     gulp.watch("./templates/template.html", gulp.series("convert-md"));
     gulp.watch("./templates/template.html").on("change", reload);
     gulp.watch("./docs/**/*.html").on("change", reload);
-    gulp.watch("./docs/assets/*.css").on("change", reload);
+    gulp.watch("./docs/assets/css/*.css").on("change", reload);
   })
 );
 

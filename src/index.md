@@ -13,8 +13,8 @@
   author: Jall Profesor
   lang: 'es-ES'
   css:
-    - assets/modesto.min.css
-    - assets/jall.min.css
+    - assets/css/modesto.min.css
+    - assets/css/jall.min.css
 ---
 
 # Sitio en construcción {.myclass}
@@ -64,7 +64,7 @@ splot cos(u)+.5*cos(u)*cos(v),sin(u)+.5*sin(u)*cos(v),.5*sin(v) \
 
 ~~~{.gnuplot im_fmt="svg"  im_out="img" im_dir="assets/images/pd"}
 set terminal svg \
-    font "arial,10" fontscale 1.0 size 500, 350
+    font "arial,11" fontscale 1.0 size 500, 350
 set border 4095 front linetype -1 linewidth 1.000
 set view 130, 10, 1, 1
 set samples 50, 50
@@ -77,7 +77,7 @@ splot sin(sqrt(x**2+y**2))/sqrt(x**2+y**2)
 
 ~~~
 
-~~~{.mermaid im_opt="-H 500" im_fmt="svg" im_out="img" im_dir="assets/images/pd"}
+~~~{.mermaid im_opt="-H 300" im_fmt="svg" im_out="img" im_dir="assets/images/pd"}
 sequenceDiagram
     Alice ->> Bob: Hello Bob, how are you?
     Bob-->>John: How about you John?

@@ -20,8 +20,8 @@
   author: Jall Profesor
   lang: 'es-ES'
   css:
-    - assets/modesto.min.css
-    - assets/jall.min.css
+    - assets/css/modesto.min.css
+    - assets/css/jall.min.css
 ---
 
 # Clases particulares
