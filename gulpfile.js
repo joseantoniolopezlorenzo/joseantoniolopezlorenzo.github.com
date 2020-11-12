@@ -78,7 +78,7 @@ gulp.task("minify-html", function () {
 
 gulp.task(
   "server",
-  gulp.series("clean-doc-images", "clean-src-images","convert-md", "minify-css", "cp-images", function () {
+  gulp.series("clean-doc-images", "convert-md", "minify-css", "cp-images", function () {
     browserSync.init({
       server: "./docs",
     });
@@ -93,4 +93,4 @@ gulp.task(
 );
 
 gulp.task("default", gulp.series("server"));
-gulp.task("build", gulp.series("convert-md", "minify-html"));
+gulp.task("build", gulp.series("clean-src-images","convert-md", "minify-html"));

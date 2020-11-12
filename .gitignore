@@ -43,12 +43,9 @@ jspm_packages/
 .geanyprj
 mermaid-filter.err
 package-lock.json
-
-# TypeScript v1 declaration files
-typings/
-
-# TypeScript cache
-*.tsbuildinfo
+/assets/images/pd-images/
+*.sublime-project
+*.sublime-workspace
 
 # Optional npm cache directory
 .npm
